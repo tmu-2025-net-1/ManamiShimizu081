@@ -1,0 +1,27 @@
+
+.haikei{
+ margin: 0;
+  background-size: cover;          /* 画面全体にぴったり */
+  background-position: center;     /* 中央に配置 */
+}
+
+.drop{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  animation: fall linear infinite;
+
+  @keyframes fall {
+      0% {
+        top: -50px;
+        opacity: 1;
+      }
+      100% {
+        top: 100vh;
+        opacity: 0.5;
+      }
+    }
+    
+}
+
+
