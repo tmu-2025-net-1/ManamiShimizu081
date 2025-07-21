@@ -1,27 +1,51 @@
 
 .haikei{
- margin: 0;
+  margin: 0;
   background-size: cover;          /* 画面全体にぴったり */
   background-position: center;     /* 中央に配置 */
 }
 
-.drop{
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  animation: fall linear infinite;
 
-  @keyframes fall {
-      0% {
-        top: -50px;
-        opacity: 1;
-      }
-      100% {
-        top: 100vh;
-        opacity: 0.5;
-      }
-    }
-    
+
+.drop {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 雨の直線落下 */
+@keyframes fallRain {
+  0% {
+    top: -60px;
+    opacity: 1;
+  }
+  100% {
+    top: 200vh;
+    opacity: 0.3;
+  }
+}
+
+/* しずくのゆっくり＆ゆらゆら落下（1200pxスタート） */
+@keyframes fallDrop {
+  0% {
+    top: 1300px;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    top: 1600px; /* ページ下まで落ちる距離を想定 */
+    transform: translateX(30px); /* ゆらゆら移動 */
+    opacity: 1;
+  }
 }
 
 
+
+.hana{
+  position:absolute;
+  top:1200px;
+  left:-100px;
+  right:0px;
+}
