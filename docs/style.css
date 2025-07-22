@@ -1,51 +1,71 @@
 
 .haikei{
-  margin: 0;
   background-size: cover;          /* 画面全体にぴったり */
   background-position: center;     /* 中央に配置 */
 }
 
 
 
-.drop {
+/* しずく：左右に傾きながら落ちる */
+@keyframes fallShizuku {
+  0% {
+    transform: translateY(1200px) rotate(-45deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(1600px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(2000px) rotate(-45deg);
+    opacity: 0.4;
+  }
+}
+
+/* suiteki：止まったりスッと動いたり */
+@keyframes floatSuiteki {
+  0% {
+    transform: translateY(2470px);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(2470px); /* 止まる */
+  }
+  40% {
+    transform: translateY(2520px);
+  }
+  60% {
+    transform: translateY(2620px);
+  }
+  80% {
+    transform: translateY(2670px);
+  }
+  100% {
+    transform: translateY(2720px);
+    opacity: 0;
+  }
+}
+
+/* 窓画像を配置して重ね順上に */
+.mado-wrapper {
   position: absolute;
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 1;
-  pointer-events: none;
+  top: 2800px;
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
 }
 
-/* 雨の直線落下 */
-@keyframes fallRain {
-  0% {
-    top: -60px;
-    opacity: 1;
-  }
-  100% {
-    top: 200vh;
-    opacity: 0.3;
-  }
-}
 
-/* しずくのゆっくり＆ゆらゆら落下（1200pxスタート） */
-@keyframes fallDrop {
-  0% {
-    top: 1300px;
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  100% {
-    top: 1600px; /* ページ下まで落ちる距離を想定 */
-    transform: translateX(30px); /* ゆらゆら移動 */
-    opacity: 1;
-  }
-}
 
 
 
 .hana{
   position:absolute;
-  top:1200px;
+  top:2000px;
   left:-100px;
   right:0px;
+
 }
+
+
