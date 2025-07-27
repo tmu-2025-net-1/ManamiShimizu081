@@ -75,3 +75,20 @@
       75%  { transform: scaleY(-1) translateX(3px); }
       100% { transform: scaleY(-1) translateX(0px); }
      }
+
+
+/*虹を作る------------------------------------*/
+
+     .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+     }
+
+     .rainbow {
+      position: absolute;
+      top: 50px;
+      width: 80px;
+      opacity: 0;
+      transform: translateY(0);
+     }

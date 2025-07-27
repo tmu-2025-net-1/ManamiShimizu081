@@ -39,7 +39,7 @@ for (let i = 0; i < dropCount; i++) {
 }
 
 
-//鏡面反射
+//鏡面反射-----------------------------------
    const original = document.getElementById("original");
    const clone = original.cloneNode(true);
    clone.classList.add("mirror");
@@ -54,3 +54,41 @@ window.addEventListener('load', () => {
         behavior: 'auto' // 瞬時にスクロール。'smooth' にすると目で見えてしまう
          });
         });
+
+//虹を作る-----------------------------------
+
+window.addEventListener("load", () => {
+  const container = document.getElementById("container");
+  const imageCount = 5;
+
+  for (let i = 0; i < imageCount; i++) {
+    const img = document.createElement("img");
+    img.src = "nizi-red.png";
+    img.className = "rainbow";
+
+    // ランダムな left位置 (5%〜95%)
+    const leftPos = Math.random() * 90 + 5;
+    img.style.left = `${leftPos}%`;
+
+    container.appendChild(img);
+
+    // ランダムなアニメーション時間（2〜4秒）
+    const duration = Math.random() * 2000 + 2000;
+
+    // トリガーは画像ごとに非同期にスタートさせる（少し遅らせて自然に）
+    setTimeout(() => {
+      img.animate(
+        [
+          { transform: "translateY(0)", opacity: 0 },
+          { transform: "translateY(30px)", opacity: 1 },
+          { transform: "translateY(90vh)", opacity: 0 }
+        ],
+        {
+          duration: duration,
+          easing: "ease-in",
+          fill: "forwards"
+        }
+      );
+    }, i * 300); // 順番にずらす
+  }
+});
