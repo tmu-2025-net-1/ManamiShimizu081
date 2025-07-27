@@ -4,14 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>形を変える言葉</title>
+    <link rel="stylesheet" href="next.css">
+    
 </head>
-<body>
-    <div class="haikei2">
-        <img src="img/top2.png">
-    </div>
+<content>
+ <body>
+  <div class="content" id="original">
+   <div class="haikei">
+     <img src="img/top2.png">
+   </div>
+
+   <div class="hana1">
+     <img src="img/hana.png">
+   </div>
+
+   <div class="hana2">
+     <img src="img/hana.png">
+   </div> 
 
 
- <script src="script.js"></script>
+   
+   </div> 
+
+   <div class="reflection-container" id="mirror-container"></div>
+
+   <!-- SVGフィルター定義 -->
+  <svg width="0" height="0">
+    <filter id="wave">
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="turb"/>
+      <feDisplacementMap in2="turb" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G">
+        <animate attributeName="scale" values="20; 22; 20" dur="4s" repeatCount="indefinite" />
+      </feDisplacementMap>
+    </filter>
+  </svg>
  
-</body>
+ 
+  <script src="next.js"></script>
+
+ </body>
+</content>
 </html>

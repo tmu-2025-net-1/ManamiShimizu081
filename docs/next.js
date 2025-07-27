@@ -1,7 +1,6 @@
-
 //雨を降らせるーーーーーーーーーーーーーー
 
-const dropCount = 30;
+const dropCount = 10;
 const body = document.body;
 
 // ページの高さを取得
@@ -48,22 +47,10 @@ for (let i = 0; i < dropCount; i++) {
    document.getElementById("mirror-container").appendChild(clone);
 
 
-//画面切り替え
-    window.addEventListener('scroll', function () {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const docHeight = document.body.scrollHeight;
-
-      if (scrollTop + windowHeight >= docHeight) {
-        // 最下部に到達したら next.html に遷移
-        window.location.href = "next.html";
-        window.addEventListener('load', () => {
+window.addEventListener('load', () => {
         // 一番下までスクロール
         window.scrollTo({
         top: document.body.scrollHeight,
         behavior: 'auto' // 瞬時にスクロール。'smooth' にすると目で見えてしまう
          });
         });
-      }
-
-    });
