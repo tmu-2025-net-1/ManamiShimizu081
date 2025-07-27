@@ -15,7 +15,7 @@ const styleSheet = document.createElement("style");
 styleSheet.innerHTML = `
   @keyframes fallDynamic {
     0% { top: -20px; opacity: 1; }
-    100% { top: ${pageHeight}px; opacity: 0; }
+    100% { top: 3000px; opacity: 0; }
   }
 `;
 document.head.appendChild(styleSheet);
@@ -40,4 +40,9 @@ for (let i = 0; i < dropCount; i++) {
 }
 
 
+//鏡面反射
+   const original = document.getElementById("original");
+   const clone = original.cloneNode(true);
+   clone.classList.add("mirror");
 
+   document.getElementById("mirror-container").appendChild(clone);
