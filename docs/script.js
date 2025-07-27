@@ -39,6 +39,5 @@ for (let i = 0; i < dropCount; i++) {
   body.appendChild(drop);
 }
 
-//雲を動かすーーーーーーーーーーーーーーーー
 
 
