@@ -51,6 +51,12 @@ for (let i = 0; i < dropCount; i++) {
   
 
 //画面切り替えーーーーーーーーーーーーーーーーーーーーーー
+ // ページ読み込み時に最下部へ自動スクロール
+    window.addEventListener('load', function () {
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+
+
 
 window.addEventListener('scroll', function () {
   const scrollTop = window.scrollY;
