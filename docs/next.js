@@ -47,11 +47,23 @@ for (let i = 0; i < dropCount; i++) {
    document.getElementById("mirror-container").appendChild(clone);
 
 
-window.addEventListener('load', () => {
-        // 一番下までスクロール
-        window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'auto' // 瞬時にスクロール。'smooth' にすると目で見えてしまう
-         });
-        });
 
+  
+
+//画面切り替えーーーーーーーーーーーーーーーーーーーーーー
+
+window.addEventListener('scroll', function () {
+  const scrollTop = window.scrollY;
+
+  if (scrollTop <= 0) {
+    window.location.href = "index.html";
+  }
+});
+
+// ページ読み込み後、一番下を初期表示にする
+window.addEventListener('load', () => {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'auto' // 瞬時にスクロールする
+  });
+});

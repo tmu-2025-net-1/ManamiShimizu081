@@ -49,21 +49,15 @@ for (let i = 0; i < dropCount; i++) {
 
 
 //画面切り替え
-    window.addEventListener('scroll', function () {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const docHeight = document.body.scrollHeight;
+   let hasNavigated = false;
 
-      if (scrollTop + windowHeight >= docHeight) {
-        // 最下部に到達したら next.html に遷移
-        window.location.href = "next.html";
-        window.addEventListener('load', () => {
-        // 一番下までスクロール
-        window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'auto' // 瞬時にスクロール。'smooth' にすると目で見えてしまう
-         });
-        });
-      }
+window.addEventListener('scroll', function () {
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const docHeight = document.body.scrollHeight;
 
-    });
+  if (!hasNavigated && scrollTop + windowHeight >= docHeight - 5) {
+    hasNavigated = true;
+    window.location.href = "next.html";
+  }
+});
