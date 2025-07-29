@@ -54,7 +54,6 @@
       transform: scaleY(-1);
       opacity: 0.7;
       pointer-events: none; /* 反射面をクリックできなくする */
-      /*filter: blur(1px); */
       filter: url(#wave); /* SVGフィルターを適用 */
       animation: ripple 5s infinite ease-in-out;
     }
@@ -79,16 +78,108 @@
 
 /*虹を作る------------------------------------*/
 
-     .container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-     }
+/* 虹のコンテナ　*/
+    .rainbow-wrapper {
+     display:flex;
+     gap: 0px;
+     margin-top: 500px;
+     position: relative;
+     left:100px;
+    }
 
-     .rainbow {
-      position: absolute;
-      top: 50px;
-      width: 80px;
-      opacity: 0;
-      transform: translateY(0);
-     }
+/* 虹個別のスタイル */
+    .rainbow-red {
+     position:relative;
+     top:100px;
+     width: 20px;
+     height: 30px;
+     background-image: url("img/nizi-red.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     animation: floatNizi 5s ease-in-out infinite;
+    }
+
+    .rainbow-orange {
+     position:relative;
+     top:90px;
+     left:random(300px,400px);
+     width: 20px;
+     height: 30px;
+     background-image: url("img/nizi-orange.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     animation: floatNizi 5s ease-in-out infinite;
+    }
+
+    .rainbow-yellow {
+     position:relative;
+     top:80px;
+     left:random(200px,300px);
+     width: 20px;
+     height: 30px;
+     background-image: url("img/nizi-yellow.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     animation: floatNizi 5s ease-in-out infinite;
+    }
+
+    .rainbow-green {
+     position:relative;
+     top:70px;
+     left:random(300px,400px);
+     width: 20px;
+     height: 30px;
+     background-image: url("img/nizi-green.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     animation: floatNizi 5s ease-in-out infinite;
+    }
+
+     .rainbow-lightblue {
+     position:relative;
+     top:60px;
+     left:random(400px,500px);
+     width: 20px;
+     height: 30px;
+     background-image: url("img/nizi-lightblue.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     animation: floatNizi 5s ease-in-out infinite;
+    }
+
+    .rainbow-blue {
+     position:relative;
+     top:50px;
+     left:random(500px,600px);
+     width: 20px;
+     height: 30px;
+     background-image: url("img/nizi-blue.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     animation: floatNizi 5s ease-in-out infinite;
+    }
+
+    .rainbow-purple {
+     position:relative;
+     top:40px;
+     left:random(600px,700px);
+     width: 20px;
+     height: 30px;
+     background-image: url("img/nizi-purple.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     animation: floatNizi 5s ease-in-out infinite;
+    }
+
+/* 虹のアニメーション */
+     @keyframes floatNizi {
+     0% {
+      transform: translateY(0px) rotate(0deg) ;
+      }
+     50% {
+      transform: translateY(-20px) rotate(45deg);
+      }
+     75% {
+      transform: translateY(0px) rotate(-45deg);
+      }
+}
