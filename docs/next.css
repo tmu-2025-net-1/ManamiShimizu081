@@ -1,7 +1,8 @@
 .body {
+  display:contents;
   position: relative;
   height: 2000px;
-  width:3000px;
+  width:2000px;
 }
 
 
@@ -32,48 +33,45 @@
   left:600px;
 }
 
-.drop {
-  position: absolute;
-  top: 10px;
-  width: 20px;
-  height: 10px;
+
+
+/*雨を作るーーーーーーーーーーーーーーーーーーーーー
+
+/* 雨のコンテナ　*/
+.rain-wrapper {
+ display:flex;
+ position: relative;
+ top: 0px;
+}
+
+
+/* 雨個別のスタイル */
+.rain {
+  position:relative;
+  top:0px;
+  left:random(200px,2500px);
+  width: 90px;
+  height: 90px;
   background-image: url("img/ame.png");
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 1;
+  animation: fallRain 10s ease-in;
+  animation-iteration-count: 3; /* 3回繰り返す */
+}
+
+/* 雨のアニメーション */
+@keyframes fallRain {
+  0% {
+    transform: translateY(-500px);
+  }
+  
+  100% {
+    transform: translateY(2800px);
+  }
 }
 
 
 
-
-
-
-
-/*鏡面反射 ---------------------------------*/
-    .mirror {
-      transform: scaleY(-1);
-      opacity: 0.7;
-      pointer-events: none; /* 反射面をクリックできなくする */
-      filter: url(#wave); /* SVGフィルターを適用 */
-      animation: ripple 5s infinite ease-in-out;
-    }
-
-    .reflection-container {
-      position: relative;
-      top:3855px;
-      width: 100%;
-      height: 100px;
-      transform: scaleY(0.3);
-      
-    }
-
-     @keyframes ripple {
-      0%   { transform: scaleY(-1) translateX(0px); }
-      25%  { transform: scaleY(-1) translateX(-3px); }
-      50%  { transform: scaleY(-1) translateX(0px); }
-      75%  { transform: scaleY(-1) translateX(3px); }
-      100% { transform: scaleY(-1) translateX(0px); }
-     }
 
 
 /*虹を作る------------------------------------*/
@@ -90,9 +88,10 @@
 /* 虹個別のスタイル */
     .rainbow-red {
      position:relative;
-     top:100px;
+     top:random(100px,220px);
      width: 20px;
      height: 30px;
+     left:random(0px,200px);
      background-image: url("img/nizi-red.png");
      background-size: contain;
      background-repeat: no-repeat;
@@ -101,8 +100,8 @@
 
     .rainbow-orange {
      position:relative;
-     top:90px;
-     left:random(300px,400px);
+     top:random(110px,320px);
+     left:random(170px,300px);
      width: 20px;
      height: 30px;
      background-image: url("img/nizi-orange.png");
@@ -113,8 +112,8 @@
 
     .rainbow-yellow {
      position:relative;
-     top:80px;
-     left:random(200px,300px);
+     top:random(120px,420px);
+     left:random(270px,400px);
      width: 20px;
      height: 30px;
      background-image: url("img/nizi-yellow.png");
@@ -125,8 +124,8 @@
 
     .rainbow-green {
      position:relative;
-     top:70px;
-     left:random(300px,400px);
+     top:random(130px,300px);
+     left:random(370px,500px);
      width: 20px;
      height: 30px;
      background-image: url("img/nizi-green.png");
@@ -137,8 +136,8 @@
 
      .rainbow-lightblue {
      position:relative;
-     top:60px;
-     left:random(400px,500px);
+     top:random(140px,300px);
+     left:random(470px,600px);
      width: 20px;
      height: 30px;
      background-image: url("img/nizi-lightblue.png");
@@ -149,8 +148,8 @@
 
     .rainbow-blue {
      position:relative;
-     top:50px;
-     left:random(500px,600px);
+     top:random(150px,300px);
+     left:random(570px,700px);
      width: 20px;
      height: 30px;
      background-image: url("img/nizi-blue.png");
@@ -161,25 +160,52 @@
 
     .rainbow-purple {
      position:relative;
-     top:40px;
-     left:random(600px,700px);
+     top:random(160px,300px);
+     left:random(670px,800px);
      width: 20px;
      height: 30px;
      background-image: url("img/nizi-purple.png");
      background-size: contain;
      background-repeat: no-repeat;
-     animation: floatNizi 5s ease-in-out infinite;
+     animation: floatNizi 2s ease-in infinite;
     }
 
 /* 虹のアニメーション */
      @keyframes floatNizi {
      0% {
-      transform: translateY(0px) rotate(0deg) ;
+       opacity: 1;
       }
      50% {
-      transform: translateY(-80px) rotate(45deg);
+       opacity: 0;
       }
      75% {
-      transform: translateY(0px) rotate(-45deg);
+       opacity: 1;
       }
 }
+
+
+/*鏡面反射 ---------------------------------*/
+    .mirror {
+      transform: scaleY(-1);
+      opacity: 0.7;
+      pointer-events: none; /* 反射面をクリックできなくする */
+      filter: url(#wave); /* SVGフィルターを適用 */
+      animation: ripple 5s infinite ease-in-out;
+    }
+
+    .reflection-container {
+      position: relative;
+      top:3840px;
+      width: 100%;
+      height: 100px;
+      transform: scaleY(0.5);
+      
+    }
+
+     @keyframes ripple {
+      0%   { transform: scaleY(-1) translateX(0px); }
+      25%  { transform: scaleY(-1) translateX(-3px); }
+      50%  { transform: scaleY(-1) translateX(0px); }
+      75%  { transform: scaleY(-1) translateX(3px); }
+      100% { transform: scaleY(-1) translateX(0px); }
+     }

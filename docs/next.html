@@ -11,8 +11,9 @@
  <body>
   <div class="content" id="original">
    <div class="haikei">
-     <img src="img/top2.png">
+     <img src= "img/top2.png">
    </div>
+  </div>
 
    <div class="hana1">
      <img src="img/hana.png">
@@ -24,21 +25,19 @@
 
 
    
-   </div> 
-
-   <div class="reflection-container" id="mirror-container"></div>
-
-   <!-- SVGフィルター定義 -->
-  <svg width="0" height="0">
-    <filter id="wave">
-      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="turb"/>
-      <feDisplacementMap in2="turb" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G">
-        <animate attributeName="scale" values="20; 22; 20" dur="4s" repeatCount="indefinite" />
-      </feDisplacementMap>
-    </filter>
-  </svg>
  
-  
+  <div class="rain-wrapper">
+      <div class="rain" style="animation-delay: 0s;"></div>
+      <div class="rain" style="animation-delay: -5.3s;"></div>
+      <div class="rain" style="animation-delay: -1.2s;"></div>
+      <div class="rain" style="animation-delay: -3.1s;"></div>
+      <div class="rain" style="animation-delay: -4.1s;"></div>
+      <div class="rain" style="animation-delay: -3.5s;"></div>
+      <div class="rain" style="animation-delay: -6.3s;"></div>
+      <div class="rain" style="animation-delay: -2.4s;"></div>
+      <div class="rain" style="animation-delay: -1.1s;"></div>
+     
+  </div>
 
   <div class="rainbow-wrapper">
       <div class="rainbow-red" style="animation-delay: 0s;"></div>
@@ -103,6 +102,21 @@
       <div class="rainbow-purple" style="animation-delay: 1.6s;"></div> 
 
     </div>
+
+
+   </div> 
+
+   <div class="reflection-container" id="mirror-container"></div>
+
+   <!-- SVGフィルター定義 -->
+  <svg width="0" height="0">
+    <filter id="wave">
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="turb"/>
+      <feDisplacementMap in2="turb" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G">
+        <animate attributeName="scale" values="20; 22; 20" dur="4s" repeatCount="indefinite" />
+      </feDisplacementMap>
+    </filter>
+  </svg>
 
   <script src="next.js"></script>
 
