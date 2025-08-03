@@ -30,3 +30,5 @@ window.addEventListener('load', () => {
    clone.classList.add("mirror");
 
    document.getElementById("mirror-container").appendChild(clone);
+
+   

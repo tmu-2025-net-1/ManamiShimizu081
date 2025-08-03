@@ -1,36 +1,72 @@
-.body {
-  display:contents;
-  position: relative;
-  height: 2000px;
-  width:2000px;
+html{
+  overflow-x: hidden; 
+  margin-bottom: -10px;
+  margin-left: -20px;
+ 
+ 
+}
+
+body {
+  width: 1000px;
+  
 }
 
 
-.haikei {
+* {
+  outline: 1px solid red;
+}
+
+
+
+.fade-out{
+  display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 3000px;
-  z-index: -1;
+  top:0px;
+  opacity: 1;
+  animation: fadeOut 3s ease-in-out forwards;
 }
-
-.haikei img {
+.fade-out img {
   width: 100%;
   height: 100%;
+  max-width: 100vw;
   object-fit: cover;
+}
+
+.fade-in {
+  display: flex;
+  position: absolute;
+  top:0px;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+  
+}
+.fade-in img {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  object-fit: cover;
+}
+
+@keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 
 .hana1{
   position:absolute;
-  top:2600px;
+  top:2380px;
 }
 
 .hana2{
   position:absolute;
-  top: 2600px;
-  left:600px;
+  top: 2380px;
+  left:500px;
 }
 
 
@@ -55,8 +91,8 @@
   background-image: url("img/ame.png");
   background-size: contain;
   background-repeat: no-repeat;
-  animation: fallRain 10s ease-in;
-  animation-iteration-count: 3; /* 3回繰り返す */
+  animation: fallRain 10s ease-in infinite;
+  
 }
 
 /* 雨のアニメーション */
@@ -192,7 +228,7 @@
   justify-content: center;
   gap: 100px;
   position: relative;
-  top:2100px;
+  top:1850px;
   
 }
 
@@ -236,8 +272,8 @@
 
     .reflection-container {
       position: relative;
-      top:3720px;
-      width: 100%;
+      top:3010px;
+      width: 100vw;
       height: 100px;
       transform: scaleY(0.5);
       
