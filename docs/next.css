@@ -12,9 +12,7 @@ body {
 }
 
 
-* {
-  outline: 1px solid red;
-}
+
 
 
 
@@ -24,6 +22,7 @@ body {
   top:0px;
   opacity: 1;
   animation: fadeOut 3s ease-in-out forwards;
+ 
 }
 .fade-out img {
   width: 100%;
@@ -60,12 +59,12 @@ body {
 
 .hana1{
   position:absolute;
-  top:2380px;
+  top:2350px;
 }
 
 .hana2{
   position:absolute;
-  top: 2380px;
+  top: 2350px;
   left:500px;
 }
 
@@ -109,113 +108,67 @@ body {
 
 
 
-
 /*虹を作る------------------------------------*/
 
-/* 虹のコンテナ　*/
-    .rainbow-wrapper {
-     display:flex;
-     gap: 0px;
-     margin-top: 500px;
-     position: relative;
-     left:100px;
-    }
+
 
 /* 虹個別のスタイル */
-    .rainbow-red {
-     position:relative;
-     top:random(100px,220px);
-     width: 20px;
-     height: 30px;
-     left:random(0px,200px);
-     background-image: url("img/nizi-red.png");
+    .rainbow1 {
+     display: flex;
+     width: 600px;
+     height: 500px;
+     position:absolute;
+     top:500px;
+     left: 100px;
+     transform: rotate(-10deg);
+     background-image: url("img/nizi1.png");
      background-size: contain;
      background-repeat: no-repeat;
-     animation: floatNizi 5s ease-in-out infinite;
+     animation: floatNizi 13s ease-out infinite;
+     animation-fill-mode: forwards;
     }
 
-    .rainbow-orange {
-     position:relative;
-     top:random(110px,320px);
-     left:random(170px,300px);
-     width: 20px;
-     height: 30px;
-     background-image: url("img/nizi-orange.png");
+    .rainbow2 {
+     display: flex;
+     width:  600px;
+     height: 500px;
+     position:absolute;
+     top:430px;
+     left:350px;
+     transform: rotate(5deg);
+     background-image: url("img/nizi2.png");
      background-size: contain;
      background-repeat: no-repeat;
-     animation: floatNizi 5s ease-in-out infinite;
+     animation: floatNizi 13s ease-out infinite;
+     animation-fill-mode: forwards;
     }
 
-    .rainbow-yellow {
-     position:relative;
-     top:random(120px,420px);
-     left:random(270px,400px);
-     width: 20px;
-     height: 30px;
-     background-image: url("img/nizi-yellow.png");
+    .rainbow3 {
+     display: flex;
+     width: 600px;
+     height: 500px;
+     position:absolute;
+     top:450px;
+     left:600px;
+     transform: rotate(12deg);
+     background-image: url("img/nizi3.png");
      background-size: contain;
      background-repeat: no-repeat;
-     animation: floatNizi 5s ease-in-out infinite;
+     animation: floatNizi 13s ease-out infinite;
+     animation-fill-mode: forwards;
     }
 
-    .rainbow-green {
-     position:relative;
-     top:random(130px,300px);
-     left:random(370px,500px);
-     width: 20px;
-     height: 30px;
-     background-image: url("img/nizi-green.png");
-     background-size: contain;
-     background-repeat: no-repeat;
-     animation: floatNizi 5s ease-in-out infinite;
-    }
-
-     .rainbow-lightblue {
-     position:relative;
-     top:random(140px,300px);
-     left:random(470px,600px);
-     width: 20px;
-     height: 30px;
-     background-image: url("img/nizi-lightblue.png");
-     background-size: contain;
-     background-repeat: no-repeat;
-     animation: floatNizi 5s ease-in-out infinite;
-    }
-
-    .rainbow-blue {
-     position:relative;
-     top:random(150px,300px);
-     left:random(570px,700px);
-     width: 20px;
-     height: 30px;
-     background-image: url("img/nizi-blue.png");
-     background-size: contain;
-     background-repeat: no-repeat;
-     animation: floatNizi 5s ease-in-out infinite;
-    }
-
-    .rainbow-purple {
-     position:relative;
-     top:random(160px,300px);
-     left:random(670px,800px);
-     width: 20px;
-     height: 30px;
-     background-image: url("img/nizi-purple.png");
-     background-size: contain;
-     background-repeat: no-repeat;
-     animation: floatNizi 2s ease-in infinite;
-    }
-
+    
 /* 虹のアニメーション */
      @keyframes floatNizi {
      0% {
-       opacity: 1;
-      }
-     50% {
        opacity: 0;
       }
-     75% {
+     50% {
        opacity: 1;
+      }
+     100% {
+       opacity: 0;
       }
 }
 
@@ -228,7 +181,7 @@ body {
   justify-content: center;
   gap: 100px;
   position: relative;
-  top:1850px;
+  top:2250px;
   
 }
 
@@ -272,7 +225,7 @@ body {
 
     .reflection-container {
       position: relative;
-      top:3010px;
+      top:3800px;
       width: 100vw;
       height: 100px;
       transform: scaleY(0.5);

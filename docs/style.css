@@ -11,9 +11,6 @@ html{
   
 }
 
-* {
-  outline: 1px solid red;
-}
 
 
 .haikei {
@@ -43,7 +40,98 @@ html{
   left:600px;
 }
 
+.setsumei{
+   display: inline;
+   position: absolute;
+   top:100px;
+   left: 100px;
+   z-index: 2;
+   animation: fade 10s ease-in-out;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
 
+@keyframes fade {
+  0% {
+   opacity: 1;
+  }
+  100% {
+   opacity: 0;
+  }
+}
+
+.kumo-mo{
+  position:absolute;
+  top: 1300px;
+  left:600px;
+}
+
+.kumo-mo2{
+  position:absolute;
+  top: 1300px;
+  left:600px;
+  animation: kaiten 5s ease-in-out infinite;
+}
+
+@keyframes kaiten {
+  0% {
+   transform: translateY(0px) rotate(0deg);
+   opacity: 1;
+  }
+
+  25% {
+   transform: translateY(70px) rotate(0deg);
+   opacity: 0.5;
+  }
+
+  50% {
+   transform: translateY(70px) rotate(90deg);
+   opacity: 0.5;
+  }
+ 
+  75% {
+   transform: translateY(80px) rotate(90deg);
+   opacity: 0.2;
+  }
+
+
+  100% {
+   transform: translateY(100px) rotate(90deg);
+   opacity: 0;
+  }
+}
+
+.ame-mo{
+  position:absolute;
+  top: 1500px;
+  left:600px;
+  animation: kaiten2 5s ease-in-out infinite;
+}
+
+@keyframes kaiten2 {
+  0% {
+   transform: translateY(-120px) rotate(90deg);
+   opacity: 0.2;
+  }
+
+  50% {
+   transform: translateY(0px) rotate(0deg);
+   opacity: 0.5;
+  }
+
+  100% {
+   transform: translateY(0px) rotate(0deg) ;
+   opacity: 1;
+  }
+ 
+  
+}
+
+.ame-mo2{
+  position:absolute;
+  top: 1500px;
+  left:600px;
+}
 
 /*雲を作るーーーーーーーーーーーーーーーーーーーーー
 
@@ -204,3 +292,6 @@ html{
       75%  { transform: scaleY(-1) translateX(3px); }
       100% { transform: scaleY(-1) translateX(0px); }
      }
+
+
+     
