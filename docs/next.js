@@ -1,17 +1,5 @@
 
 
-
-//鏡面反射-----------------------------------
-   const original = document.getElementById("original");
-   const clone = original.cloneNode(true);
-   clone.classList.add("mirror");
-
-   document.getElementById("mirror-container").appendChild(clone);
-
-
-
-  
-
 //画面切り替えーーーーーーーーーーーーーーーーーーーーーー
  // ページ読み込み時に最下部へ自動スクロール
     window.addEventListener('load', function () {
@@ -35,3 +23,10 @@ window.addEventListener('load', () => {
     behavior: 'auto' // 瞬時にスクロールする
   });
 });
+
+//鏡面反射
+   const original = document.getElementById("original");
+   const clone = original.cloneNode(true);
+   clone.classList.add("mirror");
+
+   document.getElementById("mirror-container").appendChild(clone);

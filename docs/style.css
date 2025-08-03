@@ -42,20 +42,37 @@
   margin-top: 0px;
 }
 
-.cloud-wrapper2 {
-  display: inline-block;
-  margin-top: -200px;
-  margin-left: 200px;
-  
-}
+
 
 /* 雲個別のスタイル */
-.cloud {
+.cloud1 {
   position:relative;
   top:0px;
   width: 600px;
   height: 500px;
-  background-image: url("img/kumo.png");
+  background-image: url("img/kumo1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: floatCloud 5s ease-in-out infinite;
+}
+
+.cloud2 {
+  position:relative;
+  top:0px;
+  width: 600px;
+  height: 500px;
+  background-image: url("img/kumo2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: floatCloud 5s ease-in-out infinite;
+}
+
+.cloud3 {
+  position:relative;
+  top:0px;
+  width: 600px;
+  height: 500px;
+  background-image: url("img/kumo3.png");
   background-size: contain;
   background-repeat: no-repeat;
   animation: floatCloud 5s ease-in-out infinite;
@@ -67,7 +84,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0px);
@@ -131,8 +148,8 @@
   position:relative;
   top:0px;
   left:random(0px,2500px);
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   background-image: url("img/ame.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -142,11 +159,11 @@
 /* 雨のアニメーション */
 @keyframes fallRain {
   0% {
-    transform: translateY(-500px);
+    transform: translateX(0px) translateY(-500px);
   }
   
   100% {
-    transform: translateY(2300px);
+    transform: translateX(-50px) translateY(2300px);
   }
 }
 
@@ -161,7 +178,7 @@
 
     .reflection-container {
       position: relative;
-      top:3505px;
+      top:3410px;
       width: 100%;
       height: 100px;
       transform: scaleY(0.5);
