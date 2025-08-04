@@ -60,78 +60,40 @@ html{
   }
 }
 
+
+
+
 .kumo-mo{
   position:absolute;
-  top: 1300px;
-  left:600px;
+  top: 1000px;
+  left:650px;
+  z-index: 10; 
+  pointer-events: none;
+  transition: transform 0.1s linear;
 }
 
-.kumo-mo2{
-  position:absolute;
-  top: 1300px;
-  left:600px;
-  animation: kaiten 5s ease-in-out infinite;
-}
-
-@keyframes kaiten {
-  0% {
-   transform: translateY(0px) rotate(0deg);
-   opacity: 1;
-  }
-
-  25% {
-   transform: translateY(70px) rotate(0deg);
-   opacity: 0.5;
-  }
-
-  50% {
-   transform: translateY(70px) rotate(90deg);
-   opacity: 0.5;
-  }
- 
-  75% {
-   transform: translateY(80px) rotate(90deg);
-   opacity: 0.2;
-  }
 
 
-  100% {
-   transform: translateY(100px) rotate(90deg);
-   opacity: 0;
-  }
-}
 
 .ame-mo{
   position:absolute;
-  top: 1500px;
-  left:600px;
-  animation: kaiten2 5s ease-in-out infinite;
+  top: 1800px;
+  left:650px;
+  z-index: 11; 
+  pointer-events: none;
+  transition: transform 0.1s linear;
 }
 
-@keyframes kaiten2 {
-  0% {
-   transform: translateY(-120px) rotate(90deg);
-   opacity: 0.2;
-  }
 
-  50% {
-   transform: translateY(0px) rotate(0deg);
-   opacity: 0.5;
-  }
-
-  100% {
-   transform: translateY(0px) rotate(0deg) ;
-   opacity: 1;
-  }
- 
-  
-}
-
-.ame-mo2{
+.shizuku-mo{
   position:absolute;
-  top: 1500px;
-  left:600px;
+  top: 2500px;
+  left:650px;
+  z-index: 12; 
+  pointer-events: none;
+  transition: transform 0.1s linear;
 }
+
 
 /*雲を作るーーーーーーーーーーーーーーーーーーーーー
 
@@ -199,7 +161,7 @@ html{
   justify-content: center;
   gap: 100px;
   position: relative;
-  top:2200px;
+  top:2100px;
   
 }
 
