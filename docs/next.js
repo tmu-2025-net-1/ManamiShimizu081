@@ -43,7 +43,7 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting && !hasFixed) {
         // 画面に入った「最初の一回だけ」固定
         ameMo.style.position = 'fixed';
-        ameMo.style.top = '50%';
+        ameMo.style.top = '30%';
         ameMo.style.left = '50%';
         ameMo.style.transform = 'translate(-50%, -50%)';
       

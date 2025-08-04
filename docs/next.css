@@ -73,8 +73,7 @@ body {
   top:2200px;
   left:50%;
   z-index: 10; 
-  transform: translateX(-50%);
-  transition: transform 0.3s, top 0.3s;
+  transition: transform 0.3s linear;
 }
 
 
@@ -85,7 +84,7 @@ body {
   left:50%;
   z-index: 11; 
   pointer-events: none;
-  transition: transform 0.1s linear;
+  transition: transform 0.3s linear;
 }
 
 
